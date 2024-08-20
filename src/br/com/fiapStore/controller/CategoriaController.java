@@ -13,7 +13,7 @@ public class CategoriaController {
     private CategoriaDAO categoriaDAO;
 
     public CategoriaController() throws SQLException {
-        Connection connection = new ConnectionFactoryPool().getConnection();
+        Connection connection = ConnectionFactoryPool.getConnection();
         categoriaDAO = new CategoriaDAO(connection);
     }
 

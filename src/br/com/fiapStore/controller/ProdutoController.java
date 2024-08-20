@@ -13,7 +13,7 @@ public class ProdutoController {
     private ProdutoDAO produtoDAO;
 
     public ProdutoController() throws SQLException {
-        Connection connection = new ConnectionFactoryPool().getConnection();
+        Connection connection = ConnectionFactoryPool.getConnection();
         this.produtoDAO = new ProdutoDAO(connection);
     }
 
